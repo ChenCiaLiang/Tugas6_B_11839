@@ -68,7 +68,7 @@ if st.sidebar.button("Prediksi"):
                 label_color = primary_color if label == "Matang" else secondary_color
 
                 # Display prediction results
-                st.sidebar.write("**Nama File:** {uploaded_file.name}")
+                st.sidebar.write(f"**Nama File:** {uploaded_file.name}")
                 st.sidebar.markdown (f" <h4 style='color: {label_color};'>Prediksi: {label}</h4>", unsafe_allow_html=True)
 
                 # Display confidence scores
