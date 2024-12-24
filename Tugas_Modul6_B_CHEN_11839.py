@@ -6,7 +6,7 @@ from PIL import Image
 
 # Load the pre-trained model
 # Sesuaikan dengan path model Anda (model terbaik yang di dump dalam format .h5)
-model = r'gugelnet.h5'
+model = load_model('gugelnet.h5')
 class_names = ['Matang', 'Mentah']
 
 # Function to preprocess and classify image
@@ -37,7 +37,7 @@ def custom_progress_bar (confidence, color1, color2):
         <div style="width: {percentage1:.2f}%; background: {color1}; color: white; text-align: center; height: 24px; float: left;"> 
             {percentage1:.2f}%
         </div>
-        <div style="width: {percentage2:.2f} %; background: {color2}; color: white; text-align: center; height: 24px; float: left;"> 
+        <div style="width: {percentage2:.2f}%; background: {color2}; color: white; text-align: center; height: 24px; float: left;"> 
             {percentage2:.2f}%
         </div>
     </div>
